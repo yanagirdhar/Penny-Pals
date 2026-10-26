@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://YOUR-APP.vercel.app"><b>Live demo</b></a>
+  <a href="https://penny-pals-app.vercel.app/"><b>Live demo</b></a>
 </p>
 
 ---
@@ -24,9 +24,6 @@
 | :---: | :---: |
 | ![Friends](docs/screenshots/friends.png) | ![Transactions](docs/screenshots/transactions.png) |
 
-| Dark mode |
-| :---: |
-| ![Dark mode](docs/screenshots/dark-mode.png) |
 
 ## Features
 

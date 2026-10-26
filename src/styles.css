@@ -1,0 +1,709 @@
+:root {
+    --bg: #f6f4ec;
+    --card: #fff;
+    --side: #1f5a3d;
+    --sidet: #e9f3ec;
+    --pri: #1f5a3d;
+    --prit: #fff;
+    --acc: #f7d95c;
+    --txt: #16301f;
+    --mut: #6b7d70;
+    --bd: #e3e6dc;
+    --pos: #15803d;
+    --neg: #dc2626
+}
+
+[data-theme=dark] {
+    --bg: #1f1f1f;
+    --card: #2b2b2b;
+    --side: #121614;
+    --sidet: #cfe3d6;
+    --pri: #3f8f63;
+    --prit: #fff;
+    --acc: #2f6b4a;
+    --txt: #ececec;
+    --mut: #a0a0a0;
+    --bd: #3d3d3d;
+    --pos: #4ade80;
+    --neg: #f87171
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--txt)
+}
+
+h1 {
+    font-size: 2rem;
+    margin: .2rem 0
+}
+
+h3 {
+    margin: .2rem 0 .6rem
+}
+
+.y {
+    color: #2a8a55
+}
+
+.mut,
+small {
+    color: var(--mut)
+}
+
+small {
+    display: block
+}
+
+.pos {
+    color: var(--pos)
+}
+
+.neg {
+    color: var(--neg)
+}
+
+.shell {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+    background: var(--side)
+}
+
+aside {
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: var(--sidet)
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1
+}
+
+.logo {
+    width: 100%;
+    max-width: 170px;
+    border-radius: 14px;
+    background: #f6f4ec;
+    padding: 6px;
+    align-self: center
+}
+
+.logo.big {
+    max-width: 220px;
+    margin: 0 auto
+}
+
+.nl {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 11px 14px;
+    border-radius: 999px;
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+    text-align: left
+}
+
+.nl.active {
+    background: var(--acc);
+    color: #16301f
+}
+
+.nl:hover {
+    background: #ffffff1a
+}
+
+.nl.active:hover {
+    background: var(--acc)
+}
+
+main {
+    background: var(--bg);
+    margin: 10px 10px 10px 0;
+    border-radius: 28px;
+    padding: 22px 28px;
+    overflow: auto
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.pill {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: var(--card);
+    padding: 6px 8px 6px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--bd)
+}
+
+.pill small {
+    font-size: .75rem
+}
+
+.av {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--acc);
+    color: #16301f;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    flex: none
+}
+
+.icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--bd);
+    background: var(--card);
+    color: var(--txt);
+    cursor: pointer;
+    font-size: 1.1rem
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--bd);
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 16px
+}
+
+.inner {
+    background: var(--bg);
+    margin: 6px 0
+}
+
+.btn {
+    background: var(--pri);
+    color: var(--prit);
+    border: 2px solid var(--pri);
+    border-radius: 999px;
+    padding: 11px 22px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: .95rem
+}
+
+.btn.ghost {
+    background: none;
+    color: var(--txt);
+    border-color: var(--bd)
+}
+
+.btn.sm {
+    padding: 6px 14px;
+    font-size: .82rem
+}
+
+.btn:disabled {
+    opacity: .6
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--bd);
+    background: var(--card);
+    color: var(--txt);
+    font: inherit;
+    margin: 4px 0
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin: 12px 0;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.row input {
+    flex: 1;
+    margin: 0
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 16px 0
+}
+
+.stat b {
+    font-size: 1.7rem;
+    display: block
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px
+}
+
+.li {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--bd)
+}
+
+.li:last-child {
+    border: 0
+}
+
+.grow {
+    flex: 1
+}
+
+.r {
+    text-align: right
+}
+
+.badge {
+    background: var(--acc);
+    color: #16301f;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 700
+}
+
+.note {
+    background: var(--acc);
+    color: #16301f;
+    border-radius: 14px;
+    padding: 10px 14px;
+    margin: 10px 0
+}
+
+.empty {
+    text-align: center;
+    padding: 16px
+}
+
+.lnk {
+    color: var(--pri);
+    font-weight: 700;
+    text-decoration: none
+}
+
+.form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600
+}
+
+.chk {
+    display: flex !important;
+    gap: 10px;
+    align-items: center;
+    font-weight: 400 !important
+}
+
+.chk input {
+    width: auto;
+    margin: 0
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #0008;
+    display: grid;
+    place-items: center;
+    z-index: 9;
+    padding: 16px
+}
+
+.modal .card {
+    max-width: 380px;
+    width: 100%
+}
+
+.auth {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--side);
+    padding: 16px;
+    position: relative
+}
+
+.authc {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center
+}
+
+.tg {
+    position: absolute;
+    top: 16px;
+    right: 16px
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px
+}
+
+.links a {
+    color: var(--pri);
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 600
+}
+
+.center {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    color: var(--txt)
+}
+
+@media(max-width:800px) {
+    .shell {
+        grid-template-columns: 1fr;
+        padding-bottom: 64px
+    }
+
+    aside {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        flex-direction: row;
+        padding: 6px;
+        z-index: 5
+    }
+
+    aside .logo {
+        display: none
+    }
+
+    aside nav {
+        flex-direction: row;
+        justify-content: space-around
+    }
+
+    .nl b {
+        display: none
+    }
+
+    .nl {
+        padding: 10px 14px
+    }
+
+    .nl.out {
+        display: none
+    }
+
+    main {
+        margin: 0;
+        border-radius: 0
+    }
+
+    .stats,
+    .grid2 {
+        grid-template-columns: 1fr
+    }
+}
+
+[data-theme=dark] .av,
+[data-theme=dark] .badge,
+[data-theme=dark] .note,
+[data-theme=dark] .nl.active {
+    color: #fff
+}
+
+[data-theme=dark] .y {
+    color: #7bd6a0
+}
+
+[data-theme=dark] .logo {
+    background: var(--card)
+}
+
+[data-theme=dark] .btn.ghost:hover {
+    background: var(--bg)
+}
+
+.pick {
+    position: relative;
+    margin: 4px 0
+}
+
+.pbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    padding: 6px 10px;
+    border: 1px solid var(--bd);
+    border-radius: 14px;
+    background: var(--card);
+    cursor: text
+}
+
+.pbox input {
+    border: 0;
+    background: none;
+    flex: 1;
+    min-width: 90px;
+    margin: 0;
+    padding: 6px;
+    outline: none
+}
+
+.tag {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    background: var(--acc);
+    color: #16301f;
+    padding: 4px 6px 4px 12px;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600
+}
+
+[data-theme=dark] .tag {
+    color: #fff
+}
+
+.tag button {
+    border: 0;
+    background: #0002;
+    color: inherit;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    cursor: pointer;
+    padding: 0
+}
+
+.plist {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 4px);
+    max-height: 240px;
+    overflow: auto;
+    background: var(--card);
+    border: 1px solid var(--bd);
+    border-radius: 14px;
+    z-index: 15;
+    padding: 6px;
+    box-shadow: 0 8px 24px #0003
+}
+
+.popt {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 9px 10px;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+.popt:hover {
+    background: var(--bg)
+}
+
+.popt small {
+    display: inline
+}
+
+.cb {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--bd);
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    font-size: .8rem;
+    flex: none
+}
+
+.popt.on .cb {
+    background: var(--pri);
+    border-color: var(--pri);
+    color: var(--prit)
+}
+
+.bell {
+    position: relative
+}
+
+.dot {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--neg);
+    color: #fff;
+    border-radius: 999px;
+    font-size: .65rem;
+    padding: 1px 6px;
+    font-weight: 700
+}
+
+.drop {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 320px;
+    max-height: 400px;
+    overflow: auto;
+    background: var(--card);
+    border: 1px solid var(--bd);
+    border-radius: 18px;
+    padding: 12px;
+    z-index: 20;
+    box-shadow: 0 8px 24px #0003
+}
+
+.nitem {
+    color: inherit;
+    text-decoration: none
+}
+
+.nitem:hover {
+    background: var(--bg)
+}
+
+.acts {
+    display: flex;
+    gap: 6px
+}
+
+.btn.danger {
+    color: var(--neg);
+    border-color: var(--neg)
+}
+
+@media(max-width:800px) {
+    .drop {
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        top: 70px;
+        width: auto
+    }
+
+    .li {
+        flex-wrap: wrap
+    }
+}
+
+/* spacing fixes */
+h1 {
+    margin: .2rem 0 1.2rem
+}
+
+main>div>p.mut {
+    margin: 0 0 1rem
+}
+
+.card {
+    padding: 24px 26px;
+    margin-bottom: 20px
+}
+
+.card h3 {
+    margin: 0 0 .9rem
+}
+
+.li {
+    padding: 16px 0;
+    gap: 14px
+}
+
+.li small {
+    margin-top: 4px
+}
+
+.lnk {
+    display: inline-block;
+    margin-top: 16px
+}
+
+main>div>input {
+    margin: 0 0 20px
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.form label {
+    margin: 8px 0 -6px
+}
+
+.form .chk {
+    margin: 0
+}
+
+.form input,
+.form select,
+.form .pick {
+    margin: 0
+}
+
+.form>.btn {
+    align-self: flex-start;
+    margin-top: 6px
+}
+
+.form .card.inner {
+    margin: 6px 0
+}
+
+.form .row {
+    margin: 6px 0 0
+}
+
+.stats {
+    margin: 20px 0 24px
+}
+
+.row {
+    margin: 16px 0
+}
